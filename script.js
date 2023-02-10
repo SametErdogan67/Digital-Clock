@@ -21,8 +21,11 @@ setInterval(() => {
 
 const date = document.getElementById("date");
 let date1 = new Date();
-day = date1.getDay();
-month = date1.getMonth();
+// console.log(date1);
+day = date1.getDate();
+console.log(day);
+month = date1.getUTCMonth();
+console.log(month);
 year = date1.getFullYear();
 
 if (day < 10) {
@@ -44,4 +47,23 @@ let dayOfWeek = function () {
   return gunler[date1.getDay()];
 };
 console.log(dayOfWeek());
-date.textContent = `${day}.${month}.${year} ${dayOfWeek()}`;
+
+let monthOfYear = function () {
+  let aylar = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return aylar[date1.getMonth()];
+};
+console.log(monthOfYear());
+
+date.textContent = `${day} ${monthOfYear()} ${year} - ${dayOfWeek()}`;
