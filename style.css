@@ -14,7 +14,7 @@ body {
 .container {
   height: 100px;
   width: 360px;
-  background: white;
+  background: linear-gradient(45deg, #14ffe9, #ffeb3b, #ff00e0);
   border-radius: 10px;
   display: flex;
   justify-content: center;
